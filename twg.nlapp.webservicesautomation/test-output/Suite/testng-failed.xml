@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.cucumber.custoemlisteners.CustomerListener"/>
+  </listeners>
+  <test thread-count="5" name="Android(failed)">
+    <parameter name="UUID_" value="42003a0fd3148479"/>
+    <parameter name="platformVersion_" value="9.0"/>
+    <parameter name="deviceName_" value="Samsung S9"/>
+    <classes>
+      <class name="com.mobile.runners.Runner_ProductsTab_Features">
+        <methods>
+          <include name="runCuke"/>
+          <include name="deviceSetUp"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- com.mobile.runners.Runner_ProductsTab_Features -->
+    </classes>
+  </test> <!-- Android(failed) -->
+</suite> <!-- Failed suite [Suite] -->
