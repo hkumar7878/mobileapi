@@ -37,9 +37,16 @@ public class Page_Products_NLAPP extends NewBaseClass{
 	@AndroidFindBy(id="nz.co.noelleeming.mynlapp.qat:id/title")
 	public AndroidElement productTitle;
 	
+	/*@AndroidFindBy(id="nz.co.noelleeming.mynlapp.staging:id/title")
+	public AndroidElement productTitle;*/
+	
 	@AndroidFindBy(className = "nz.co.noelleeming.mynlapp.qat:id/label​")
 	//@AndroidFindBys({@AndroidFindBy(id = "nz.co.noelleeming.mynlapp.qat:id/label​")})
 	public List<MobileElement> txt_ParentCategories;
+	
+	/*@AndroidFindBy(className = "nz.co.noelleeming.mynlapp.staging:id/label​")
+	//@AndroidFindBys({@AndroidFindBy(id = "nz.co.noelleeming.mynlapp.qat:id/label​")})
+	public List<MobileElement> txt_ParentCategories;*/
 	
 	@FindBys(@FindBy(id = "label"))
 	public List<MobileElement> txt_ParentCategories1;

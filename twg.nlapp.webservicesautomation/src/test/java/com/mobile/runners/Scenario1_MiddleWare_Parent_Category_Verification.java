@@ -15,8 +15,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(
-		features="src/test/resources/features/ProductsTab.feature",
-		glue="com.nlapp.categories"	
+		features="src/test/resources/features/Scenario1_MiddleWare_Parent_Category_Verification.feature",
+		glue="com.nlapp.api"	
 				
 		)
 public class Scenario1_MiddleWare_Parent_Category_Verification extends NewBaseClass {

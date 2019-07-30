@@ -4,11 +4,13 @@ Feature: To verify MiddleWare Scanning BarCodes
     Given User Access import.CurrentBarcode DB view to fetch item id for <BarCode> EAN-13 BarCode
      
     Then user access export.DemandWareProductCurrent DB table to fetch Dataelements for EAN-13 Products BarCodes
+    
     Given user access ScanBarcode JSON to fetch API response values for EAN-13 BarCodes
+    
     Then verify the ScanBarCode JSON API response values for EAN 13 BarCodes
     
     Examples:
-    |   BarCode   |
+    |  BarCode    |
     |9312254110215|
     |0884420396079|
     |0884420396031|

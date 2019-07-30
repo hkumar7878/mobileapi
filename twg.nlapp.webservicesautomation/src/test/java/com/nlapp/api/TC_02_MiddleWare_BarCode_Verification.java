@@ -14,6 +14,7 @@ import io.restassured.path.json.JsonPath;
 import com.cucumber.grid.app.pages.Page_Products_NLAPP;
 import com.cucumber.parallel.baseSteps.steps.NewBaseClass;
 import com.cucumber.parallel.extent.ExtentTestManager;
+import com.nlapp.utility.AppUtility_NLApp;
 
 import cucumber.api.DataTable;
 import cucumber.api.Scenario;
@@ -35,12 +36,16 @@ public class TC_02_MiddleWare_BarCode_Verification extends NewBaseClass{
 	List<String> dbParentCtryNames= new ArrayList<String>();
 	List<String> apiParentCtryNames=new ArrayList<String>();
 	String barCode;
+	String itemId;
 	
 	
-	@Given("^User Access import\\.CurrentBarcode DB view to fetch item id for ([^\"]*) EAN-(\\d+) BarCode$")
-	public void user_Access_import_CurrentBarcode_DB_view_to_fetch_item_id_for_EAN_BarCode(String arg1, int arg2) throws Throwable {
+	@Then("^user access export\\.DemandWareProductCurrent DB table to fetch Dataelements for EAN-(\\d+) Products BarCodes$")
+	public void user_access_export_DemandWareProductCurrent_DB_table_to_fetch_Dataelements_for_EAN_Products_BarCodes(int arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
 		System.out.println("Bar code are" + arg1);
-		barCode=arg1;
+		barCode=Integer.toString(arg1);
+		String sqlQuery= "Select ItemId from [import].[CurrentBarcode] where Barcode='+"+barCode+"+'";
+		itemId=AppUtility_NLApp.getSQLQueryData1(sqlQuery, "itemId");
 	}
 
 	@Then("^user access export\\.DemandWareProductCurrent DB table to fetch Dataelements for Returned Products BarCodes$")

@@ -13,8 +13,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -46,6 +48,10 @@ public class NewBaseClass extends CustomerListener{
 	
 	public String browserName;
 	DesiredCapabilities cap=null;
+	public static String ErrDescription;
+	public static List<String> mismatchValues;
+	public static List<String> apiParentCtryNames1=new ArrayList<String>();
+	public static ArrayList<String> dbParentCtryNames=new ArrayList<String>();
 	//public Properties Config = new Properties();
 	public static AppiumDriver<WebElement> driver;
 	public static ThreadLocal<AppiumDriver> dr = new ThreadLocal<AppiumDriver>();
@@ -109,8 +115,8 @@ public class NewBaseClass extends CustomerListener{
 					cap.setCapability("udid", UUID_);
 					cap.setCapability("platformName", "Android");
 					cap.setCapability("platformVersion", platformVersion);					
-					//cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.qat");
-					cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.staging");
+					cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.qat");
+					//cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.staging");
 					cap.setCapability("appActivity","nz.co.noelleeming.mynlapp.MainActivity");				
 					driver = new AppiumDriver<WebElement>(service.getUrl(), cap);
 					System.out.println("Starting the appium server");

@@ -5,17 +5,17 @@
     <listener class-name="com.cucumber.custoemlisteners.CustomerListener"/>
   </listeners>
   <test thread-count="5" name="Android(failed)">
-    <parameter name="UUID_" value="42003a0fd3148479"/>
+    <parameter name="UUID_" value="22add29822017ece"/>
     <parameter name="platformVersion_" value="9.0"/>
     <parameter name="deviceName_" value="Samsung S9"/>
     <classes>
-      <class name="com.mobile.runners.Runner_ProductsTab_Features">
+      <class name="com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification">
         <methods>
-          <include name="runCuke"/>
           <include name="deviceSetUp"/>
           <include name="quitDriver"/>
+          <include name="runCuke"/>
         </methods>
-      </class> <!-- com.mobile.runners.Runner_ProductsTab_Features -->
+      </class> <!-- com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification -->
     </classes>
   </test> <!-- Android(failed) -->
 </suite> <!-- Failed suite [Suite] -->
