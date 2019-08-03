@@ -10,11 +10,11 @@ public class GenericUtility_NLApp extends NewBaseClass{
 	
 	public static String[][] convertListIntoTwoDimArray(List<String> list)
 	{	
-		String ctryArray[][] = new String[list.size() + 1][1];		
+		String ctryArray[][] = new String[list.size()][1];		
 		try {
 			for (int i = 0; i < list.size(); i++) {
 				ctryArray[i][0] = list.get(i);
-				System.out.println("Value of two dimensional array is--------->" + ctryArray[i + 1][0]);
+				//System.out.println("Value of two dimensional array is--------->" + ctryArray[i + 1][0]);
 			}			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

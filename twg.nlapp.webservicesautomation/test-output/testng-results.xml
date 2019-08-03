@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="449657" started-at="2019-07-29T20:58:11Z" finished-at="2019-07-29T21:05:41Z">
+  <suite name="Suite" duration-ms="26310" started-at="2019-08-03T08:01:51Z" finished-at="2019-08-03T08:02:17Z">
     <groups>
     </groups>
-    <test name="Android" duration-ms="449657" started-at="2019-07-29T20:58:11Z" finished-at="2019-07-29T21:05:41Z">
+    <test name="Android" duration-ms="26310" started-at="2019-08-03T08:01:51Z" finished-at="2019-08-03T08:02:17Z">
       <class name="com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification">
-        <test-method status="PASS" signature="deviceSetUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification@510f3d34]" name="deviceSetUp" is-config="true" duration-ms="16771" started-at="2019-07-29T20:58:11Z" finished-at="2019-07-29T20:58:28Z">
+        <test-method status="PASS" signature="deviceSetUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification@23d2a7e8]" name="deviceSetUp" is-config="true" duration-ms="17145" started-at="2019-08-03T08:01:51Z" finished-at="2019-08-03T08:02:08Z">
           <params>
             <param index="0">
               <value>
@@ -16,7 +16,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[22add29822017ece]]>
+                <![CDATA[42003a0fd3148479]]>
               </value>
             </param>
             <param index="2">
@@ -28,109 +28,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deviceSetUp -->
-        <test-method status="FAIL" signature="runCuke()[pri:0, instance:com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification@510f3d34]" name="runCuke" duration-ms="432771" started-at="2019-07-29T20:58:28Z" finished-at="2019-07-29T21:05:41Z">
-          <exception class="cucumber.runtime.CucumberException">
-            <message>
-              <![CDATA[java.lang.NullPointerException]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: java.lang.NullPointerException
-at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:57)
-at com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification.runCuke(Scenario1_MiddleWare_Parent_Category_Verification.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-at com.nlapp.api.TC_01_MiddleWare_Parent_Category_Verification.all_categories_on_Product_tab_is_fetched(TC_01_MiddleWare_Parent_Category_Verification.java:146)
-at ✽.Then all categories on Product tab is fetched(src/test/resources/features/Scenario1_MiddleWare_Parent_Category_Verification.feature:12)
-]]>
-            </full-stacktrace>
-          </exception> <!-- cucumber.runtime.CucumberException -->
+        <test-method status="PASS" signature="runCuke()[pri:0, instance:com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification@23d2a7e8]" name="runCuke" duration-ms="9148" started-at="2019-08-03T08:02:08Z" finished-at="2019-08-03T08:02:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runCuke -->
-        <test-method status="FAIL" signature="quitDriver()[pri:0, instance:com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification@510f3d34]" name="quitDriver" is-config="true" duration-ms="12" started-at="2019-07-29T21:05:41Z" finished-at="2019-07-29T21:05:41Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[A session is either terminated or not started
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'IT301222', ip: '10.1.209.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: nz.co.noelleeming.mynlapp.M..., appPackage: nz.co.noelleeming.mynlapp.qat, databaseEnabled: false, desired: {appActivity: nz.co.noelleeming.mynlapp.M..., appPackage: nz.co.noelleeming.mynlapp.qat, deviceName: Samsung S9, platformName: android, platformVersion: 9.0, udid: 22add29822017ece}, deviceManufacturer: samsung, deviceModel: SM-G965F, deviceName: 22add29822017ece, deviceScreenSize: 1440x2960, deviceUDID: 22add29822017ece, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 9, takesScreenshot: true, udid: 22add29822017ece, warnings: {}, webStorageEnabled: false}
-Session ID: 82981199-269c-4a89-b11a-9fa8450012a0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'IT301222', ip: '10.1.209.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: nz.co.noelleeming.mynlapp.M..., appPackage: nz.co.noelleeming.mynlapp.qat, databaseEnabled: false, desired: {appActivity: nz.co.noelleeming.mynlapp.M..., appPackage: nz.co.noelleeming.mynlapp.qat, deviceName: Samsung S9, platformName: android, platformVersion: 9.0, udid: 22add29822017ece}, deviceManufacturer: samsung, deviceModel: SM-G965F, deviceName: 22add29822017ece, deviceScreenSize: 1440x2960, deviceUDID: 22add29822017ece, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 9, takesScreenshot: true, udid: 22add29822017ece, warnings: {}, webStorageEnabled: false}
-Session ID: 82981199-269c-4a89-b11a-9fa8450012a0
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-at com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification.quitDriver(Scenario1_MiddleWare_Parent_Category_Verification.java:38)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification@23d2a7e8]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-08-03T08:02:17Z" finished-at="2019-08-03T08:02:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->

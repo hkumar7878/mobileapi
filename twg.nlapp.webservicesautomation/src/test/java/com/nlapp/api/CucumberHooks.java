@@ -27,7 +27,8 @@ public class CucumberHooks extends NewBaseClass{
 		this.scenario=scenario;
 		scenarioName=scenario.getName();
 		System.out.println("SCENARIO NAME FOR TEST IS " +scenarioName );
-		ExtentTestManager.startTest("Device Name : +deviceName +" + "Scenario No : "+i+" " + scenario.getName());
+		//ExtentTestManager.startTest("Device Name : +deviceName +" + "Scenario No : "+i+" " + scenario.getName());
+		ExtentTestManager.startTest("Scenario No : "+i+" " + scenario.getName());
 		System.out.println("Scenario name is--->" + "Scenario No : "+i+" " + scenario.getName());
 		ExtentTestManager.getTest().log(Status.INFO, "Scenario started is :-" + scenario.getName());
 		//setUpFramework();
@@ -38,11 +39,11 @@ public class CucumberHooks extends NewBaseClass{
 	public void afterEachScenario(Scenario scenario) throws Exception
 	{
 		if(scenario.isFailed()){
-			ExtentTestManager.logFail("Scenario failed");
+			//ExtentTestManager.logFail("Scenario failed");
 			ExtentTestManager.addScreenShotOnFailure();
 		}	
 		else
-			ExtentTestManager.logPass("Scenario passed");
+			//ExtentTestManager.logPass("Scenario passed");
 			
 		ExtentManager.getReporter().flush();
 		quitAppiumDriver();

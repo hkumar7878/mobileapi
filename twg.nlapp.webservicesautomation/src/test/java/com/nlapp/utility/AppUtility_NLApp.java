@@ -11,6 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.cucumber.parallel.baseSteps.steps.NewBaseClass;
 import com.cucumber.parallel.extent.ExtentTestManager;
@@ -130,7 +131,7 @@ public class AppUtility_NLApp extends NewBaseClass {
 		}
 		return ctryArray1;
 	}
-	public static void listComparison1(List<String> a, List<String> b)
+	public static void listComparison1(List<String> api, List<String> deviceList)
 	{
 		/*//boolean flag=true;
 		api.add("Photo & Video");
@@ -142,21 +143,33 @@ public class AppUtility_NLApp extends NewBaseClass {
 		db.add("Health & Grooming");
 		db.add("abc");*/
 		
-		Collections.sort(a);
-		System.out.println("Sorted api list is" + a);
-		Collections.sort(b);
-		System.out.println("Sorted db list is" + b);
-		System.out.println("sorted");
-		boolean flag = true;
+		//Collections.sort(a);
+		//System.out.println("Sorted api list is" + a);//11
+		//Collections.sort(b);
+		//System.out.println("Sorted db list is" + b);//8
+		//System.out.println("sorted");
+		/*if(a.size()<b.size())
+		{
+			for(int i=0;i<a.size();i++)
+			{
+				if(!a.contains(b.get(i)))			
+					mismatchValues.add(b.get(i));
+			}
+		}
 		for(int i=0;i<a.size();i++)
 		{
-			//if(db.contains(api.get(i)))
-				//flag=true;
-			if(!b.contains(a.get(i)))
-			{
+			if(!b.contains(a.get(i)))			
 				mismatchValues.add(a.get(i));
-				//flag=false;
-			}
+		}*/
+		
+		if(api.size()>deviceList.size()){
+			mismatchValues = api.stream().filter(elem -> !deviceList.contains(elem)).collect(Collectors.toList());
+			System.out.println("Mismatched resuls are " + mismatchValues);
+		}
+		else
+		{
+			mismatchValues = deviceList.stream().filter(elem -> !api.contains(elem)).collect(Collectors.toList());
+			System.out.println("Mismatched resuls are " + mismatchValues);
 		}
 		//return flag;
 		

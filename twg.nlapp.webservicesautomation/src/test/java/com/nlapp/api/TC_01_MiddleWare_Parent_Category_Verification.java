@@ -46,7 +46,7 @@ public class TC_01_MiddleWare_Parent_Category_Verification extends NewBaseClass{
 	@Given("^user access DB and fetch category data$")
 	public static void user_access_DB_and_fetch_category_data(DataTable sqlQuery) throws Throwable {
 		
-		List<List<String>> data = sqlQuery.raw();
+		/*List<List<String>> data = sqlQuery.raw();
 		dbParentCtryNames=AppUtility_NLApp.getSQLQueryData1(data.get(0).get(0));
 		System.out.println("DATABASE PARENT CATEGORIES ARE---------------->"+dbParentCtryNames);
 		if(dbParentCtryNames!=null)
@@ -57,9 +57,9 @@ public class TC_01_MiddleWare_Parent_Category_Verification extends NewBaseClass{
 		else
 		{
 			
-		}
+		}*/
 		
-		/*dbParentCtryNames1.add("Photo & Video");
+		dbParentCtryNames1.add("Photo & Video");
 		dbParentCtryNames1.add("Televisions");
 		dbParentCtryNames1.add("Health & Grooming");
 		dbParentCtryNames1.add("Drones, Gaming & Toys");
@@ -69,7 +69,7 @@ public class TC_01_MiddleWare_Parent_Category_Verification extends NewBaseClass{
 		dbParentCtryNames1.add("Audio");
 		dbParentCtryNames1.add("Wearables");
 		dbParentCtryNames1.add("The Block NZ");
-		dbParentCtryNames1.add("Whiteware & Kitchen Appliances");*/
+		dbParentCtryNames1.add("Whiteware & Kitchen Appliances");
 		
         }
 	@Given("^user access Category API and fetch category data$")
@@ -84,7 +84,7 @@ public class TC_01_MiddleWare_Parent_Category_Verification extends NewBaseClass{
 			if(apiParentCtryNames!=null)
 			{
 				ExtentTestManager.logInfo(MarkupHelper.createLabel("Parent Category fetched from API are as follow", ExtentColor.BLUE));
-				ExtentTestManager.logInfo(MarkupHelper.createTable(dbParentCtryNames));
+				ExtentTestManager.logInfo(MarkupHelper.createTable(apiParentCtryNames));
 			}
 			
 			else
@@ -131,12 +131,12 @@ public class TC_01_MiddleWare_Parent_Category_Verification extends NewBaseClass{
 			Assert.assertTrue(flag);
 			System.out.println("Products tab is clicked successfully");
 			ExtentTestManager.logPass("Product is clicked successfully");
-		} catch (Exception e) {
+		} catch (AssertionError e) {
 			e.printStackTrace();
 			ExtentTestManager.logFail("No Product tab is displayed");
 		}
 		
-		return;
+		//return;
 	   
 	}
 
@@ -176,9 +176,17 @@ public class TC_01_MiddleWare_Parent_Category_Verification extends NewBaseClass{
 		{
 			System.out.println("Exception occured" + e.getMessage());
 			AppUtility_NLApp.listComparison1(apiParentCtryNames1, device_prntCateNames);
+			if(apiParentCtryNames1.size()>device_prntCateNames.size()){
 			ExtentTestManager.logFail("Parent Categories from both api response and mobile app NOT are matching" + "API parent"
 					+ " are " + apiParentCtryNames + "and App parent category is -->" + device_prntCateNames);
-			ExtentTestManager.logInfo("Mismatch values are " + mismatchValues);
+			ExtentTestManager.logInfo("API Parent Categories which are not shown on device are " + mismatchValues);
+			}
+			else
+			{
+				ExtentTestManager.logFail("Parent Categories from both api response and mobile app NOT are matching" + "API parent"
+						+ " are " + apiParentCtryNames + "and App parent category is -->" + device_prntCateNames);
+				ExtentTestManager.logInfo("Extra parent categories not present in API shown on device are " + mismatchValues);
+			}
 		}
 		}
 }

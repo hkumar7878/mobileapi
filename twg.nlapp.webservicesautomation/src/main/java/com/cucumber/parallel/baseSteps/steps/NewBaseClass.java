@@ -49,6 +49,7 @@ public class NewBaseClass extends CustomerListener{
 	public String browserName;
 	DesiredCapabilities cap=null;
 	public static String ErrDescription;
+	//public static List<String> API_mismatchValues;
 	public static List<String> mismatchValues;
 	public static List<String> apiParentCtryNames1=new ArrayList<String>();
 	public static ArrayList<String> dbParentCtryNames=new ArrayList<String>();
@@ -115,8 +116,8 @@ public class NewBaseClass extends CustomerListener{
 					cap.setCapability("udid", UUID_);
 					cap.setCapability("platformName", "Android");
 					cap.setCapability("platformVersion", platformVersion);					
-					cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.qat");
-					//cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.staging");
+					//cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.qat");
+					cap.setCapability("appPackage","nz.co.noelleeming.mynlapp.staging");
 					cap.setCapability("appActivity","nz.co.noelleeming.mynlapp.MainActivity");				
 					driver = new AppiumDriver<WebElement>(service.getUrl(), cap);
 					System.out.println("Starting the appium server");

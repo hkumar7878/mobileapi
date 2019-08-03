@@ -6,8 +6,10 @@
 </listeners>
 <test thread-count="5" name="Android">
   <parameter name="deviceName_" value="Samsung S9" />
-   <!-- <parameter name="UUID_" value="42003a0fd3148479" /> -->
-     <parameter name="UUID_" value="22add29822017ece" /> 
+    <parameter name="UUID_" value="42003a0fd3148479" />
+   <!--   <parameter name="UUID_" value="22add29822017ece" />  -->
+     
+     
   <parameter name="platformVersion_" value="9.0" /> 
     <classes>
       <class name="com.mobile.runners.Scenario1_MiddleWare_Parent_Category_Verification"/>   
